@@ -1,0 +1,16 @@
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculate-rem($size);
+}
+
+@mixin raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+@mixin title {
+  font-family: "Philosopher", sans-serif;
+}
+
+@mixin brand {
+  font-family: "Great Vibes", cursive;
+}

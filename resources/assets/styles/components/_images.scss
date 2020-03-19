@@ -1,0 +1,28 @@
+.is-style-title-caption {
+  position: relative;
+  margin-bottom: 0;
+
+  figcaption {
+    @include brand;
+
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    background-color: hsla(0, 0, 10, 0.5);
+    margin-bottom: 0;
+    color: $white;
+    line-height: 1.333;
+    font-size: calculate-rem(33px);
+    padding-top: $spacer/2;
+    pointer-events: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+  }
+
+  img {
+    object-fit: cover;
+    min-height: 201px;
+  }
+}

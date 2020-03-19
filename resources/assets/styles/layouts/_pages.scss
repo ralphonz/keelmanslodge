@@ -1,0 +1,50 @@
+.page-header h1 {
+  margin-top: $spacer*2;
+  font-size: calculate-rem(30px);
+}
+
+.content p:last-of-type {
+  margin-bottom: $spacer*2;
+}
+
+.page-widgets figure {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@include media-breakpoint-up(md) {
+  .page-header h1 {
+    font-size: calculate-rem(32px);
+  }
+
+  .is-style-sub-title {
+    font-size: calculate-rem(18px);
+  }
+
+  .content {
+    p:not(.wp-block-columns p, .wp-block-media-text p),
+    ul:not(.wp-block-columns ul, .wp-block-gallery ul), {
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .page-header h1 {
+    font-size: calculate-rem(36px);
+  }
+
+  .is-style-sub-title {
+    font-size: calculate-rem(20px);
+  }
+
+  .content {
+    p:not(.wp-block-columns p, .wp-block-media-text p),
+    ul:not(.wp-block-columns ul, .wp-block-gallery ul) {
+      max-width: 570px;
+    }
+  }
+}

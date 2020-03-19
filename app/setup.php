@@ -44,7 +44,9 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'keelmans-lodge-theme'),
+        'footer_navigation' => __('Footer Navigation', 'keelmans-lodge-theme'),
+        'footer_menu' => __('Footer Menu', 'keelmans-lodge-theme')
     ]);
 
     /**
@@ -52,7 +54,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
     add_theme_support('post-thumbnails');
-
+    add_image_size('medium-lg-crop', 450, 333, true);
+    add_image_size('medium-sm-crop', 295, 260, true);
     /**
      * Enable HTML5 markup support
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
@@ -66,31 +69,37 @@ add_action('after_setup_theme', function () {
     add_theme_support('customize-selective-refresh-widgets');
 
     /**
-     * Use main stylesheet for visual editor
+     * Add styles for block editor
      * @see resources/assets/styles/layouts/_tinymce.scss
      */
-    add_editor_style(asset_path('styles/main.css'));
-}, 20);
+    add_theme_support('editor-styles');
+
+    add_action('enqueue_block_editor_assets', function () {
+        wp_enqueue_style('sage/editor.css', asset_path('styles/editor.css'), false, null);
+    });
+
+});
+
 
 /**
  * Register sidebars
  */
-add_action('widgets_init', function () {
-    $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
-    ];
-    register_sidebar([
-        'name'          => __('Primary', 'sage'),
-        'id'            => 'sidebar-primary'
-    ] + $config);
-    register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
-    ] + $config);
-});
+// add_action('widgets_init', function () {
+//     $config = [
+//         'before_widget' => '<section class="widget %1$s %2$s">',
+//         'after_widget'  => '</section>',
+//         'before_title'  => '<h3>',
+//         'after_title'   => '</h3>'
+//     ];
+//     register_sidebar([
+//         'name'          => __('Primary', 'keelmans-lodge-theme'),
+//         'id'            => 'sidebar-primary'
+//     ] + $config);
+//     register_sidebar([
+//         'name'          => __('Footer', 'keelmans-lodge-theme'),
+//         'id'            => 'sidebar-footer'
+//     ] + $config);
+// });
 
 /**
  * Updates the `$post` variable on each iteration of the loop.

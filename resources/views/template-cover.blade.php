@@ -1,5 +1,5 @@
 {{--
-  Template Name: Custom Template
+  Template Name: Cover Page Template
 --}}
 
 @extends('layouts.app')

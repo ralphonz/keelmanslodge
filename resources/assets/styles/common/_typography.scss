@@ -1,0 +1,66 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes|Philosopher|Raleway:400,700&display=swap");
+
+/* Enable anti-aliasing */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @include fontSize(14px);
+  @include raleway;
+
+  color: $black;
+}
+
+p {
+  line-height: get-line-height(12px, 23px);
+  text-align: justify;
+}
+
+a {
+  color: $black;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include title;
+
+  text-align: center;
+  clear: both;
+
+  & a:hover {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  &::after {
+    content: "";
+    display: block;
+    width: 33%;
+    margin: $spacer*1.5 auto;
+    border-bottom: 1px solid $brown;
+  }
+}
+
+.no-margin {
+  margin-bottom: 0;
+}
+
+.brand {
+  @include brand;
+
+  font-weight: 400;
+  letter-spacing: 0.0633rem;
+}

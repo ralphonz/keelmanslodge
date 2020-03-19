@@ -1,0 +1,169 @@
+.content-info {
+  background-color: rgba(109, 98, 65, 0.25);
+  padding-top: 2*$spacer;
+
+  .container > * {
+    margin-bottom: 2*$spacer;
+  }
+
+  h4,
+  .keelmans-phone {
+    font-size: calculate-rem(21px);
+    text-align: center;
+  }
+
+  .directions h4 {
+    margin-bottom: $spacer/4;
+  }
+
+  .keelmans-phone {
+    @include title;
+
+    line-height: normal;
+    margin-bottom: 0;
+  }
+
+  .menu-item-has-children {
+    border: 1px solid $white;
+  }
+
+  .nav-secondary ul {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .sub-menu {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.footer-nav {
+  width: 100vw;
+  background-color: $primary;
+
+  ul .menu-item a {
+    color: $white;
+  }
+}
+
+.keelmans-location-map {
+  padding: 1px;
+}
+
+.name-address .brand {
+  margin-bottom: $spacer/4;
+  font-size: calculate-rem(25px);
+}
+
+.keelmans-address {
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.social-networks {
+  width: 200px;
+}
+
+@include media-breakpoint-down(sm) {
+  .nav-secondary {
+    margin-top: $spacer*2;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .content-info {
+    padding-bottom: 2rem;
+
+    .container {
+      flex-wrap: wrap;
+      max-width: 780px;
+      padding: 0;
+
+      & > * {
+        width: 33.333%;
+        padding: $spacer;
+        margin-bottom: 0;
+      }
+    }
+
+    .directions {
+      order: 0;
+
+      iframe {
+        width: 100%;
+        height: 131px;
+        margin-top: 0.25rem;
+      }
+    }
+
+    .directions h4,
+    .keelmans-phone {
+      text-align: left;
+      font-size: calculate-rem(26px);
+    }
+
+    .name-address {
+      order: 1;
+
+      .keelmans-address,
+      .brand {
+        text-align: left;
+      }
+
+      .brand {
+        font-size: calculate-rem(28px);
+      }
+
+      .keelmans-address {
+        font-size: calculate-rem(18px);
+        line-height: 1.45;
+      }
+    }
+
+    .phone-navmenu {
+      order: 2;
+    }
+
+    .social-networks {
+      order: 3;
+    }
+
+    .btn-container {
+      order: 4;
+    }
+
+    .btn {
+      width: 100%;
+    }
+
+    .big-lamp {
+      padding-top: calculate-rem(10px);
+      padding-bottom: calculate-rem(10px);
+      font-size: calculate-rem(19px);
+    }
+
+    .nav-secondary li a {
+      text-align: left;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0.15rem;
+      font-size: calculate-rem(17px);
+    }
+  }
+
+  .footer-nav {
+    padding: $spacer;
+
+    .nav {
+      justify-content: space-between;
+      max-width: 780px;
+      margin: auto;
+    }
+
+    ul li {
+      font-size: calculate-rem(16px);
+    }
+  }
+}

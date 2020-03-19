@@ -6,9 +6,12 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "login": [
+      "./styles/login.scss"
     ]
   },
-  "publicPath": "/wp-content/themes/keelmanslodge",
+  "publicPath": "/wp-content/themes/keelmans-lodge-theme",
   "devUrl": "http://keelmanslodge.local",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",

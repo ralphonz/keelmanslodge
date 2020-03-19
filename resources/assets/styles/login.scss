@@ -1,0 +1,31 @@
+@import "common/variables";
+@import "common/mixins";
+
+body {
+  background-color: $white;
+}
+
+.login {
+  h1 a {
+    @include brand;
+
+    width: auto;
+    height: auto;
+    background-image: none;
+    text-indent: 0;
+    font-size: 36px;
+    line-height: normal;
+  }
+}
+
+#loginform {
+  background-color: $black;
+  color: $white;
+  border: none;
+  box-shadow: 0 0 0 2px  $white, 0 0 0 8px $black;
+
+  #wp-submit {
+    background-color: $primary;
+    border-color: $primary;
+  }
+}

@@ -1,10 +1,21 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
-$theme-colors: (
-  primary: #525ddc
-);
+$primary: hsla(73, 35, 38, 1);
+$secondary: hsla(43, 23, 79, 1);
+$bone: hsla(45, 82, 93, 1);
+$white: hsla(44, 79, 96, 1);
+$black: hsla(0, 0, 10, 1);
+$dark-grey: hsla(0, 0, 20, 1);
+$brown: hsla(30, 8, 33, 1);
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
+
+/** Boostrap enable */
+$enable-rounded: false;
+$enable-shadows: false;
+
+/** Bootstrap Headings **/
+$headings-margin-bottom: 1rem;

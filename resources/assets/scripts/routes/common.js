@@ -1,3 +1,5 @@
+import 'jarallax/dist/jarallax.min.js';
+
 export default {
   init() {
     // JavaScript to be fired on all pages

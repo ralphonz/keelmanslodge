@@ -1,0 +1,47 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes|Philosopher|Raleway:400,700&display=swap");
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+
+/** Import theme styles */
+@import "common/variables";
+@import "common/functions";
+@import "common/mixins";
+@import "components/buttons";
+@import "components/images";
+@import "components/wp-classes";
+
+.edit-post-layout__content {
+  background-image: url("../../images/bg576.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: $bone;
+}
+
+.editor-post-title__block .editor-post-title__input {
+  @include title;
+
+  text-align: center;
+}
+
+.editor-post-title__block::after {
+  content: "";
+  display: block;
+  width: 33%;
+  margin: $spacer*1.5 auto;
+  border-bottom: 1px solid $brown;
+}
+
+.edit-post-visual-editor .editor-block-list__block-edit,
+.edit-post-visual-editor {
+  @include fontSize(12px);
+  @include raleway;
+
+  color: $black;
+}
+
+.edit-post-visual-editor p {
+  line-height: get-line-height(12px, 23px);
+}

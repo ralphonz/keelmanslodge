@@ -1,0 +1,51 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  background-image: url("../../images/bg576.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#wpadminbar {
+  height: 46px;
+  min-width: 240px;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@include media-breakpoint-down(sm) {
+  .wrap,
+  .wp-block-group__inner-container {
+    max-width: 416px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  body {
+    background-image: url("../../images/bg768.png");
+  }
+}
+
+@include media-breakpoint-up(md) {
+  body {
+    background-image: url("../../images/bg992.png");
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  body {
+    background-image: url("../../images/bg1200.png");
+  }
+
+  .content {
+    font-size: calculate-rem(16px);
+  }
+}

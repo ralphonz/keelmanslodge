@@ -1,12 +1,16 @@
 /** Search form */
 .search-form {
   @extend .form-inline;
+
+  flex-wrap: nowrap;
+  margin-bottom: $spacer*2;
 }
 
 .search-form label {
   @extend .form-group;
 
   font-weight: normal;
+  margin-bottom: 0;
 }
 
 .search-form .search-field {
@@ -16,4 +20,74 @@
 .search-form .search-submit {
   @extend .btn;
   @extend .btn-secondary;
+}
+
+/** Ninja Forms **/
+.nf-form-cont {
+  .nf-field-container {
+    margin-bottom: $spacer;
+  }
+
+  .nf-form-content {
+    input:not([type=button]),
+    textarea {
+      @include title;
+
+      background-color: $secondary;
+      border-radius: $spacer/4;
+      border-color: $secondary;
+      color: $brown;
+
+      &::placeholder {
+        color: $brown;
+      }
+    }
+
+    input:not([type=button]):focus,
+    textarea:focus {
+      background-color: $bone;
+      color: $brown;
+    }
+
+    input[type=button] {
+      @extend .btn;
+
+      background-color: $primary;
+      color: $white;
+
+      &:hover {
+        background-color: darken($primary, 10%);
+        color: $secondary;
+      }
+    }
+  }
+
+  .nf-pass .ninja-forms-field {
+    border-color: $primary !important;
+  }
+
+  .nf-pass.field-wrap .nf-field-element::after {
+    color: $primary;
+  }
+
+  .nf-field-label {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .nf-form-fields-required {
+    display: none;
+  }
+}
+
+.wp-block-ninja-forms-form::after {
+  content: "";
+  display: block;
+  width: 33%;
+  margin: $spacer*1 auto $spacer*2.5;
+  border-bottom: 1px solid $brown;
+}
+
+.submit-container {
+  text-align: center;
 }

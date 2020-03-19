@@ -30,7 +30,7 @@ add_filter('body_class', function (array $classes) {
  * Add "… Continued" to the excerpt
  */
 add_filter('excerpt_more', function () {
-    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'keelmans-lodge-theme') . '</a>';
 });
 
 /**
@@ -89,3 +89,13 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+/**
+ * Show custom image size in editor
+ */
+add_filter( 'image_size_names_choose', function ( $sizes ) {
+    return array_merge( $sizes, array(
+        'medium-lg-crop' => __( 'Medium Large Cropped' ),
+        'medium-sm-crop' => __( 'Medium Small Cropped' )
+    ) );
+});
