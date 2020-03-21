@@ -5,11 +5,15 @@
 }
 
 .icon svg {
-  fill: $black;
+  fill: none;
+  stroke: $black;
+  stroke-width: 1;
+  overflow: auto;
+  padding: 1px;
 }
 
 .icon:hover svg {
-  fill: $primary;
+  stroke: $primary;
 }
 
 .up-arrow {

@@ -23,8 +23,16 @@
 }
 
 @include media-breakpoint-up(md) {
-  .hero {
-    height: auto;
+  .hero,
+  .hero img {
+    height: 70vh;
+  }
+
+  @media screen and (orientation: portrait) {
+    .hero,
+    .hero img {
+      height: 80vh;
+    }
   }
 }
 
@@ -32,6 +40,13 @@
   .hero,
   .hero img {
     height: 80vh;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .hero,
+  .hero img {
+    height: 75vh;
   }
 }
 

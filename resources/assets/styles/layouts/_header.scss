@@ -115,11 +115,15 @@
     }
 
     .brand {
-      font-size: calculate-rem(45px);
+      font-size: calculate-rem(40px);
     }
 
     .brand-description {
-      font-size: calculate-rem(14px);
+      padding-bottom: $spacer/4;
+      padding-right: $spacer;
+      font-size: calculate-rem(12px);
+      text-align: center;
+      line-height: 0.25;
     }
 
     .navbar-collapse {
@@ -160,6 +164,28 @@
   .banner {
     .navbar-expand-md .navbar-nav {
       font-size: calculate-rem(17.8px);
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .banner {
+    padding: $spacer*2 $spacer;
+
+    .brand {
+      font-size: calculate-rem(60px);
+    }
+
+    .brand-description {
+      font-size: calculate-rem(16px);
+    }
+
+    .navbar-expand-md .navbar-nav {
+      font-size: calculate-rem(18px);
+    }
+
+    .btn-header {
+      font-size: calculate-rem(19px);
     }
   }
 }

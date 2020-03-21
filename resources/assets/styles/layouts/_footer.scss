@@ -1,3 +1,12 @@
+.footer-nav {
+  width: 100vw;
+  background-color: $primary;
+
+  ul .menu-item a {
+    color: $white;
+  }
+}
+
 .content-info {
   background-color: rgba(109, 98, 65, 0.25);
   padding-top: 2*$spacer;
@@ -30,20 +39,15 @@
   .nav-secondary ul {
     padding: 0;
     flex-direction: column;
+
+    a:hover {
+      color: $primary;
+    }
   }
 
   .sub-menu {
     list-style: none;
     padding: 0;
-  }
-}
-
-.footer-nav {
-  width: 100vw;
-  background-color: $primary;
-
-  ul .menu-item a {
-    color: $white;
   }
 }
 
@@ -100,6 +104,7 @@
 
     .directions h4,
     .keelmans-phone {
+      margin-bottom: 0.75rem;
       text-align: left;
       font-size: calculate-rem(26px);
     }
@@ -113,12 +118,14 @@
       }
 
       .brand {
+        margin-bottom: 0.75rem;
         font-size: calculate-rem(28px);
       }
 
       .keelmans-address {
+        padding-left: $spacer/2;
         font-size: calculate-rem(18px);
-        line-height: 1.45;
+        line-height: 1.5;
       }
     }
 
@@ -144,12 +151,21 @@
       font-size: calculate-rem(19px);
     }
 
-    .nav-secondary li a {
-      text-align: left;
-      padding-left: 0;
-      padding-right: 0;
-      padding-bottom: 0.15rem;
-      font-size: calculate-rem(17px);
+    .nav-secondary {
+      height: 74%;
+      padding-left: $spacer/2;
+
+      ul {
+        height: 100%;
+      }
+
+      li a {
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0.15rem;
+        font-size: calculate-rem(17px);
+      }
     }
   }
 

@@ -1,5 +1,5 @@
 <footer class="content-info">
-  <div class="container d-flex flex-column flex-md-row align-items-center align-items-md-start">
+  <div class="container d-flex flex-column flex-md-row align-items-center align-items-md-stretch">
     <div class="btn-container">
       <a class="btn btn-primary btn-lg book-a-room" href="{{ get_permalink(get_option('quick_contact_url')) }}">{{ _e('Book A Room', 'keelmans-lodge-theme') }}</a>
     </div>
@@ -34,7 +34,7 @@
       </p>
       <nav class="nav-secondary">
         @if (has_nav_menu('footer_menu'))
-          {!! wp_nav_menu(['theme_location' => 'footer_menu', 'menu_class' => 'nav']) !!}
+          {!! wp_nav_menu(['theme_location' => 'footer_menu', 'menu_class' => 'nav justify-content-md-between']) !!}
         @endif
       </nav>
     </div>
