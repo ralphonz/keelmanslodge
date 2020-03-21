@@ -11,20 +11,26 @@
       <h3 class="brand">{{ get_bloginfo('name', 'display') }}</h3>
       <p class="keelmans-address">
         @if( !empty( get_option('address') ) )
-          @php  echo nl2br(get_option('address')) @endphp
+          @php  echo nl2br( get_option('address') ) @endphp
         @endif
       </p>
     </div>
     <div class="social-networks d-flex justify-content-around align-self-md-stretch align-items-md-center">
-      <a class="icon facebook-icon red-icon" title="The Keelmans Facebook Page" href="{{ get_option('facebook_url') }}" target="_blank">
-        @include('icons.facebook')
-      </a>
-      <a class="icon twitter-icon gold-icon" title="The Keelmans Twitter Profile" href="{{ get_option('twitter_url') }}" target="_blank">
-        @include('icons.twitter')
-      </a>
-      <a class="icon mail-icon green-icon" title="The Keelmans Instagram Page" href="{{ get_option('instagram_url') }}" target="_blank">
-        @include('icons.instagram')
-      </a>
+      @if ( !empty( get_option('facebook_url') ) )
+        <a class="icon facebook-icon red-icon" title="The Keelmans Facebook Page" href="{{ get_option('facebook_url') }}" target="_blank">
+          @include('icons.facebook')
+        </a>
+      @endif
+      @if ( !empty( get_option('twitter_url') ) )
+        <a class="icon twitter-icon gold-icon" title="The Keelmans Twitter Profile" href="{{ get_option('twitter_url') }}" target="_blank">
+          @include('icons.twitter')
+        </a>
+      @endif
+      @if ( !empty( get_option('instagram_url') ) )
+        <a class="icon mail-icon green-icon" title="The Keelmans Instagram Page" href="{{ get_option('instagram_url') }}" target="_blank">
+          @include('icons.instagram')
+        </a>
+      @endif
     </div>
     <div class="phone-navmenu">
       <p class="keelmans-phone">{{ _e('Phone', 'keelmans-lodge-theme') }}:
@@ -33,7 +39,7 @@
         @endif
       </p>
       <nav class="nav-secondary">
-        @if (has_nav_menu('footer_menu'))
+        @if ( has_nav_menu('footer_menu') )
           {!! wp_nav_menu(['theme_location' => 'footer_menu', 'menu_class' => 'nav justify-content-md-between']) !!}
         @endif
       </nav>
