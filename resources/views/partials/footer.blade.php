@@ -8,7 +8,7 @@
       <iframe class="keelmans-location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2289.3418197247875!2d-1.75443568391004!3d54.984640658438444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487dd86538022a65%3A0x90c6d0b53a0f6321!2sThe%20Keelman!5e0!3m2!1sen!2suk!4v1581451993621!5m2!1sen!2suk" width="175" height="110" allowfullscreen="" frameBorder="0"></iframe>
     </div>
     <div class="name-address">
-      <h3 class="brand">{!! esc_html__get_bloginfo('name', 'display') !!}</h3>
+      <h3 class="brand">{!! esc_html__(get_bloginfo('name', 'display')) !!}</h3>
       <p class="keelmans-address">
         @if( !empty( get_option('address') ) )
           @php  echo nl2br( get_option('address') ) @endphp
