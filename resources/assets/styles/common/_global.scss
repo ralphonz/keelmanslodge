@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-image: url("../../images/bg576.png");
+  background-image: url("../images/bg576.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -30,22 +30,28 @@ body {
 
 @include media-breakpoint-up(sm) {
   body {
-    background-image: url("../../images/bg768.png");
+    background-image: url("../images/bg768.png");
   }
 }
 
 @include media-breakpoint-up(md) {
   body {
-    background-image: url("../../images/bg992.png");
+    background-image: url("../images/bg992.png");
   }
 }
 
 @include media-breakpoint-up(lg) {
   body {
-    background-image: url("../../images/bg1200.png");
+    background-image: url("../images/bg1200.png");
   }
 
   .content {
     font-size: calculate-rem(16px);
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  body {
+    background-image: url("../images/bg1920.png");
   }
 }
