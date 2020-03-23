@@ -35,6 +35,9 @@
 .wp-block-cover {
   margin-bottom: $spacer;
   height: 33.333vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wp-block-media-text {

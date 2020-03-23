@@ -163,6 +163,12 @@
         font-size: calculate-rem(23px);
       }
     }
+
+    .hero,
+    .hero img {
+      height: 100vh;
+      max-height: 100vh;
+    }
   }
 }
 
