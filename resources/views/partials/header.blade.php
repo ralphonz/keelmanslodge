@@ -2,7 +2,7 @@
   <div class="container">
     <nav class="navbar navbar-expand-md align-items-md-stretch" id="nav-primary">
       <div class="navbar-brand">
-        <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
+        <a class="brand" href="{{ home_url('/') }}">{!! esc_html__(get_bloginfo('name', 'display')) !!}</a>
         <div class="brand-description">
           {{ get_bloginfo('description', 'display')}}
         </div>
