@@ -58,6 +58,7 @@
 .name-address .brand {
   margin-bottom: $spacer/4;
   font-size: calculate-rem(25px);
+  white-space: nowrap;
 }
 
 .keelmans-address {

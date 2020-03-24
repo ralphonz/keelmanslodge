@@ -11,14 +11,19 @@
     object-position: 50% 50%;
   }
 
-  svg {
+  .scroll-down-to-page {
     position: absolute;
     bottom: 2rem;
     left: 50%;
     width: 79px;
     height: 23px;
-    transform: translate(-50%, -50%);
-    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.9));
+
+    svg {
+      width: 79px;
+      height: 23px;
+      transform: translate(-50%, -50%);
+      filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.9));
+    }
   }
 }
 
