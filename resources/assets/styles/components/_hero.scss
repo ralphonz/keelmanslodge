@@ -17,11 +17,11 @@
     left: 50%;
     width: 79px;
     height: 23px;
+    transform: translate(-50%, -50%);
 
     svg {
       width: 79px;
       height: 23px;
-      transform: translate(-50%, -50%);
       filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.9));
     }
   }
