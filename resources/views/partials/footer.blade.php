@@ -1,4 +1,4 @@
-<footer class="content-info">
+<footer class="content-info pagefade">
   <div class="container d-flex flex-column flex-md-row align-items-center align-items-md-stretch">
     <div class="btn-container">
       <a class="btn btn-primary btn-lg book-a-room" href="{{ get_permalink(get_option('quick_contact_url')) }}">{{ _e('Book A Room', 'keelmans-lodge-theme') }}</a>
@@ -49,7 +49,7 @@
     </div>
   </div>
 </footer>
-<div class="footer-nav clearfix">
+<div class="footer-nav clearfix pagefade">
   <nav class="nav-primary" id="nav-primary-footer">
     @if (has_nav_menu('footer_navigation'))
       {!! wp_nav_menu(['theme_location' => 'footer_navigation', 'menu_class' => 'nav']) !!}
